@@ -1,0 +1,4 @@
+[submodule "cookbook-elasticsearch"]
+    path = cookbook-elasticsearch
+    url = git://github.com/elastic/cookbook-elasticsearch.git
+
