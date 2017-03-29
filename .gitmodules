@@ -1,4 +1,7 @@
-[submodule "cookbook-elasticsearch"]
+[submodule "elasticsearch"]
     path = elasticsearch
     url = git://github.com/elastic/cookbook-elasticsearch.git
 
+[submodule "apt"]
+	path = apt
+	url = git@github.com:chef-cookbooks/apt.git
