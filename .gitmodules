@@ -29,3 +29,9 @@
 [submodule "windows"]
 	path = windows
 	url = git://github.com/chef-cookbooks/windows.git
+[submodule "java"]
+	path = java
+	url = git://github.com/agileorbit-cookbooks/java.git
+[submodule "homebrew"]
+	path = homebrew
+	url = git://github.com/chef-cookbooks/homebrew.git
