@@ -7,6 +7,7 @@ long_description 'Installs/Configures elasticsearch-civic-elk'
 version '0.1.0'
 
 depends 'elasticsearch', '>= 3.0.4'
+depends 'java'
 
 # The `issues_url` points to the location where issues for this cookbook are
 # tracked.  A `View Issues` link will be displayed on this cookbook's page when
