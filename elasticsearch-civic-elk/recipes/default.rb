@@ -13,7 +13,7 @@ elasticsearch_install 'elasticsearch' do
 end
 
 elasticsearch_configure 'elasticsearch' do
-  allocted_memory '512m'
+  allocated_memory '512m'
   configuration ({
   'cluster.name' => 'mycluster',
   'node.name' => 'node01'
