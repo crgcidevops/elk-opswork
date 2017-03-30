@@ -14,3 +14,18 @@
 [submodule "ark"]
 	path = ark
 	url = git://github.com/chef-cookbooks/ark.git
+[submodule "build-essential"]
+	path = build-essential
+	url = git@github.com:chef-cookbooks/build-essential.git
+[submodule "mingw"]
+	path = mingw
+	url = git@github.com:chef-cookbooks/mingw.git
+[submodule "ohai"]
+	path = ohai
+	url = git@github.com:chef-cookbooks/ohai.git
+[submodule "seven_zip"]
+	path = seven_zip
+	url = git@github.com:daptiv/seven_zip.git
+[submodule "windows"]
+	path = windows
+	url = git@github.com:chef-cookbooks/windows.git
