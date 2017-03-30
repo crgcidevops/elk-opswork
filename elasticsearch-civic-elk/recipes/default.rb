@@ -4,8 +4,6 @@
 #
 # Copyright:: 2017, The Authors, All Rights Reserved.
 
-default['java']['jdk_version'] = '7'
-node.override[:java][:jdk_version] = '7'
 include_recipe 'java'
 
 elasticsearch_user 'elasticsearch'
