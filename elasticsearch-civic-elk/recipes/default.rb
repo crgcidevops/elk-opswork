@@ -18,10 +18,10 @@ elasticsearch_configure 'elasticsearch' do
   allocated_memory '512m'
   configuration ({
   'cluster.name' => 'mycluster',
-  'node.name' => 'node01'
-  'http.cors.enabled' => 'true'
-  'http.cors.allow-origin' => "/https?:\/\/localhost(:[0-9]+)?/"
-  'http.cors.allow-credentials' => 'true'
+  'node.name' => 'node01',
+  'http.cors.enabled' => 'true',
+  'http.cors.allow-origin' => "/https?:\/\/localhost(:[0-9]+)?/",
+  'http.cors.allow-credentials' => 'true',
   'http.cors.allow-headers' => 'X-Requested-With,X-Auth-Token,Content-Type, Content-Length, Authorization'
   })
 end
