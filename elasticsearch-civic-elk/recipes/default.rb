@@ -27,8 +27,8 @@ elasticsearch_configure 'elasticsearch' do
     'http.cors.allow-headers' => 'X-Requested-With,X-Auth-Token,Content-Type, Content-Length, Authorization',
     'cloud' => {
       'aws' => {
-          'access_key' => 'XXX',
-          'secret_key' => 'XXX'
+          'access_key' => node['access_key'],
+          'secret_key' => node['secret_key']
         }
       },
 
