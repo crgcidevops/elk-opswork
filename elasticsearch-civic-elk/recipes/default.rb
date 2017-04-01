@@ -28,7 +28,8 @@ elasticsearch_configure 'elasticsearch' do
     'cloud' => {
       'aws' => {
           'access_key' => node['access_key'],
-          'secret_key' => node['secret_key']
+          'secret_key' => node['secret_key'],
+          'region' => node['region']
         }
       },
 
