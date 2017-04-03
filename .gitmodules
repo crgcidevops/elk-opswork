@@ -35,3 +35,9 @@
 [submodule "homebrew"]
 	path = homebrew
 	url = git://github.com/chef-cookbooks/homebrew.git
+[submodule "systemd"]
+	path = systemd
+	url = git://github.com/nathwill/chef-systemd.git
+[submodule "chef_nginx"]
+	path = chef_nginx
+	url = git://github.com/chef-cookbooks/chef_nginx.git
