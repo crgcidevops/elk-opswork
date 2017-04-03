@@ -50,3 +50,6 @@
 [submodule "zypper"]
 	path = zypper
 	url = git://github.com/jarosser06/chef-zypper.git
+[submodule "kibana5"]
+	path = kibana5
+	url = git://github.com/anuriq/chef-kibana5.git
