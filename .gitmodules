@@ -41,3 +41,12 @@
 [submodule "chef_nginx"]
 	path = chef_nginx
 	url = git://github.com/chef-cookbooks/chef_nginx.git
+[submodule "compat_resource"]
+	path = compat_resource
+	url = git://github.com/chef-cookbooks/compat_resource.git
+[submodule "yum-epel"]
+	path = yum-epel
+	url = git://github.com/chef-cookbooks/yum-epel.git
+[submodule "zypper"]
+	path = zypper
+	url = git://github.com/jarosser06/chef-zypper.git
