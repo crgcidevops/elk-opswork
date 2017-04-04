@@ -8,6 +8,8 @@ version '0.1.0'
 
 depends 'elasticsearch', '>= 3.0.4'
 depends 'java'
+depends 'kibana5'
+depends 'chef_nginx'
 
 # The `issues_url` points to the location where issues for this cookbook are
 # tracked.  A `View Issues` link will be displayed on this cookbook's page when
