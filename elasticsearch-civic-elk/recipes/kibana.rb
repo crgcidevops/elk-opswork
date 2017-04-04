@@ -10,7 +10,7 @@ end
 
 kibana5_configure 'kibana' do
   configuration 'server.port' => 5601,
-                'server.host' => localhost,
+                'server.host' => 'localhost',
                 'elasticsearch.url' => 'http://localhost:9200',
                 'logging.dest' => '/var/log/kibana.log'
 end
