@@ -15,8 +15,8 @@
 include_recipe 'java'
 
 yum_repository 'elastic5' do
-  description "Elastic repository for 5.2 packages"
-  baseurl "https://artifacts.elastic.co/packages/5.2/yum"
+  description "Elastic repository for 5.x packages"
+  baseurl "https://artifacts.elastic.co/packages/5.x/yum"
   gpgkey "https://artifacts.elastic.co/GPG-KEY-elasticsearch"
   enabled true
   gpgcheck true
