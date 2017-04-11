@@ -20,7 +20,6 @@ yum_repository 'elastic5' do
   gpgkey "https://artifacts.elastic.co/GPG-KEY-elasticsearch"
   enabled true
   gpgcheck true
-  type "rpm-md"
   action :create
 end
 
