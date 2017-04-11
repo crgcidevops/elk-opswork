@@ -29,7 +29,7 @@ yum_package 'logstash'
 
 service "logstash" do
   action :start
-  provider "Chef::Provider::Service::Init::Redhat"
+  provider Chef::Provider::Service::Init::Redhat
 end
 
 # execute 'start_service' do
