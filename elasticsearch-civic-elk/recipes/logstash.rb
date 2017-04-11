@@ -19,7 +19,6 @@ yum_repository 'elastic5' do
   baseurl "https://artifacts.elastic.co/packages/5.2/yum"
   gpgkey "https://artifacts.elastic.co/GPG-KEY-elasticsearch"
   enabled true
-  autorefresh true
   gpgcheck true
   type "rpm-md"
   action :create
