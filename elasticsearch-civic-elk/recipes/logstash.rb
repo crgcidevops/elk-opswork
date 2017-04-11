@@ -30,3 +30,11 @@ yum_package 'logstash'
 service "logstash" do
   action :start
 end
+
+execute 'start_service' do
+  command 'initctl start logstash'
+end
+
+execute 'start_service' do
+  command 'initctl reload logstash'
+end
