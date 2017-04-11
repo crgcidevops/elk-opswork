@@ -26,3 +26,7 @@ end
 
 
 yum_package 'logstash'
+
+service "logstash" do
+  action :start
+end
