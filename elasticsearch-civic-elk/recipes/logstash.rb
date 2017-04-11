@@ -27,10 +27,15 @@ end
 
 yum_package 'logstash'
 
-execute 'start_service' do
-  command 'initctl start logstash'
+service "logstash" do
+  action :start
+  provider "Chef::Provider::Service::Init::Redhat"
 end
 
-execute 'start_service' do
-  command 'initctl reload logstash'
-end
+# execute 'start_service' do
+#   command 'initctl start logstash'
+# end
+
+# execute 'start_service' do
+#   command 'initctl reload logstash'
+# end
