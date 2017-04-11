@@ -53,3 +53,6 @@
 [submodule "kibana5"]
 	path = kibana5
 	url = git://github.com/anuriq/chef-kibana5.git
+[submodule "docker"]
+	path = docker
+	url = git://github.com/chef-cookbooks/docker.git
