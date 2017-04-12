@@ -29,7 +29,13 @@ yum_package 'logstash'
 
 service "logstash" do
   action :start
-  provider Chef::Provider::Service::Init
+  reload_command  "initctl reload logstash"
+  restart_command "initctl restart logstash"
+#  service_name               String # defaults to 'name' if not specified
+  start_command "initctl start logstash"
+  status_command "initctl status logstash"
+  stop_command "initctl stop logstash"
+
 end
 
 # execute 'start_service' do
