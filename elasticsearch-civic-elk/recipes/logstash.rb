@@ -40,7 +40,7 @@ yum_package 'logstash'
 
 
 template '/etc/logstash/conf.d/default.conf' do
-  source 'logstash.conf.erb'
+  source 'logstash/logstash.conf.erb'
   # owner 'root'
   # group 'root'
   # mode '0755'
