@@ -47,7 +47,7 @@ template '/etc/logstash/conf.d/default.conf' do
 end
 
 execute 'start_service' do
-  command 'initctl start logstash && echo "Already started"'
+  command 'initctl start logstash || echo "Already started"'
 end
 
 execute 'start_service' do
