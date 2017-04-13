@@ -38,6 +38,14 @@ yum_package 'logstash'
 
 # end
 
+
+template '/etc/logstash/conf.d/default.conf' do
+  source 'logstash.conf.erb'
+  # owner 'root'
+  # group 'root'
+  # mode '0755'
+end
+
 execute 'start_service' do
   command 'initctl start logstash'
 end

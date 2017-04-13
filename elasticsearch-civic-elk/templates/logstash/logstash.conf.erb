@@ -1,0 +1,54 @@
+input {
+  tcp {
+    port => 5557
+    type => gelf
+  }
+  udp {
+    port => 5557
+    buffer_size => 1452
+    codec => collectd { }
+    type => "collectd"
+#    add_field => { "short_message" => "collectd" }
+  }
+  gelf {
+    port => 5556
+  }
+
+}
+
+filter {
+   if [type] == "collectd" {
+      mutate {
+         add_field => { "_index_qualifier" => "%{host}-collectd" }
+      }
+   } else {
+      mutate {
+         add_field => { "_index_qualifier" => "%{tag}" }
+      }
+   }
+   mutate {
+    lowercase => [ "_index_qualifier" ]
+    gsub => [
+      "_index_qualifier", " ", "-"
+    ]
+   }
+}
+
+output {
+    stdout {codec => rubydebug}
+   elasticsearch {
+      hosts => ["<%= node['elasticsearch_url'] %>"]
+      index => "logstash-%{[_index_qualifier]}-%{+YYYY.MM.dd}"
+      template_name => "logstash"
+      template_overwrite => true
+      #user => "XXXXXXXX"
+      #password => "XXXXXXXXXXXXX"
+   }
+
+#    redis {
+#       host => '172.17.0.1'
+#       port => 7379
+#       data_type => 'list'
+#       key => 'logstash:redis'
+#    }
+}
