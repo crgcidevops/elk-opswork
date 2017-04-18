@@ -15,7 +15,7 @@ yum_repository 'elastic5' do
   action :create
 end
 
-yum_package 'kibana'
+yum_package 'kibana-5.2.2-1'
 
 
 execute 'start_service' do
