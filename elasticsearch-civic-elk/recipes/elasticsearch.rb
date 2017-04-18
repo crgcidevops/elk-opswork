@@ -15,7 +15,7 @@ elasticsearch_install 'elasticsearch' do
 end
 
 elasticsearch_configure 'elasticsearch' do
-  allocated_memory '2048m'
+  allocated_memory '2048m' # set to half of RAM
   configuration ({
     'cluster.name' => 'mycluster',
     #'node.name' => 'node01',
