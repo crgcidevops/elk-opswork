@@ -30,7 +30,7 @@ node.default['nginx']['default_site_enabled'] = false
 include_recipe 'chef_nginx'
 
 nginx_site 'kibana' do
-  template 'nginx-site.conf.erb'
+  template 'kibana/nginx-site.conf.erb'
   variables(
     listen_address: '0.0.0.0',
     listen_port: '80',
