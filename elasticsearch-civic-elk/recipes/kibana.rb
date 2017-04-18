@@ -18,6 +18,14 @@ end
 yum_package 'kibana'
 
 
+execute 'start_service' do
+  command 'initctl start kibana || echo "Already started"'
+end
+
+execute 'start_service' do
+  command 'initctl reload kibana'
+end
+
 #node.default['nginx']['default_site_enabled'] = false
 #include_recipe 'chef_nginx'
 
