@@ -23,7 +23,7 @@ execute 'start_service' do
 end
 
 execute 'start_service' do
-  command 'service kibana reload'
+  command 'service kibana restart'
 end
 
 #node.default['nginx']['default_site_enabled'] = false
