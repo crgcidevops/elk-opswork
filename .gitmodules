@@ -56,3 +56,6 @@
 [submodule "docker"]
 	path = docker
 	url = git://github.com/chef-cookbooks/docker.git
+[submodule "magic"]
+	path = magic
+	url = git://github.com/sczizzo/magic-cookbook.git
