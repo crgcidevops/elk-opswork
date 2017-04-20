@@ -10,7 +10,7 @@ depends 'elasticsearch', '>= 3.0.4'
 depends 'java'
 depends 'kibana5'
 depends 'chef_nginx'
-depends 'zookeper'
+depends 'zookeeper'
 depends 'docker', '~> 2.0'
 
 # The `issues_url` points to the location where issues for this cookbook are
