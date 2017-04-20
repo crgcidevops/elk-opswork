@@ -68,3 +68,6 @@
 [submodule "runit"]
 	path = runit
 	url = git://github.com/chef-cookbooks/runit.git
+[submodule "kafka"]
+	path = kafka
+	url = git://github.com/mthssdrbrg/kafka-cookbook.git
