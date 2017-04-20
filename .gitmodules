@@ -59,3 +59,6 @@
 [submodule "magic"]
 	path = magic
 	url = git://github.com/sczizzo/magic-cookbook.git
+[submodule "zookeeper"]
+	path = zookeeper
+	url = git://github.com/evertrue/zookeeper-cookbook.git
