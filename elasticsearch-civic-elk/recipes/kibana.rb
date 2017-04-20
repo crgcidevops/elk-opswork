@@ -38,3 +38,4 @@ nginx_site 'kibana' do
      kibana_port: '5601'
    )
 end
+
