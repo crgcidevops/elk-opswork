@@ -62,3 +62,6 @@
 [submodule "zookeeper"]
 	path = zookeeper
 	url = git://github.com/evertrue/zookeeper-cookbook.git
+[submodule "packagecloud"]
+	path = packagecloud
+	url = git://github.com/computology/packagecloud-cookbook.git
