@@ -64,3 +64,5 @@ end
 
 include_recipe 'zookeeper::config_render'
 include_recipe 'zookeeper::service'
+
+include_recipe 'kafka::default'
