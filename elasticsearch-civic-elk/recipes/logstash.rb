@@ -62,5 +62,5 @@ zookeeper '3.4.10' do
   action   :install
 end
 
-include_recipe zookeeper::config_render
-include_recipe zookeeper::service
+include_recipe 'zookeeper::config_render'
+include_recipe 'zookeeper::service'
