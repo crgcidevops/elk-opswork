@@ -53,3 +53,14 @@ end
 execute 'start_service' do
   command 'initctl reload logstash'
 end
+
+
+zookeeper '3.4.10' do
+  username 'zookeeper'
+  mirror   'http://apache.mirrors.hoobly.com/zookeeper'
+  #checksum 'f10a0b51f45c4f64c1fe69ef713abf9eb9571bc7385a82da892e83bb6c965e90'
+  action   :install
+end
+
+include_recipe zookeeper::config_render
+include_recipe zookeeper::service
