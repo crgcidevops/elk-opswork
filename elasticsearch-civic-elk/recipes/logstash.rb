@@ -51,7 +51,7 @@ execute 'start_service' do
 end
 
 execute 'start_service' do
-  command 'initctl reload logstash'
+  command 'initctl restart logstash'
 end
 
 
