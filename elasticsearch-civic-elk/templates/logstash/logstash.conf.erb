@@ -6,24 +6,6 @@ input {
 
 }
 
-filter {
-   if [type] == "collectd" {
-     mutate {
-         add_field => { "_index_qualifier" => "%{host}-collectd" }
-      }
-   } else {
-      mutate {
-         add_field => { "_index_qualifier" => "%{tag}" }
-      }
-   }
-   mutate {
-    lowercase => [ "_index_qualifier" ]
-    gsub => [
-      "_index_qualifier", " ", "-"
-    ]
-   }
-}
-
 output {
     stdout {codec => rubydebug}
     kafka {
