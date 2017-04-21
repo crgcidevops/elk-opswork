@@ -1,15 +1,5 @@
 input {
-  tcp {
-    port => 5557
-    type => gelf
-  }
-  udp {
-    port => 5557
-    buffer_size => 1452
-    codec => collectd { }
-    type => "collectd"
-#    add_field => { "short_message" => "collectd" }
-  }
+
   gelf {
     port => 5556
   }
@@ -18,7 +8,7 @@ input {
 
 filter {
    if [type] == "collectd" {
-      mutate {
+     mutate {
          add_field => { "_index_qualifier" => "%{host}-collectd" }
       }
    } else {
@@ -36,19 +26,8 @@ filter {
 
 output {
     stdout {codec => rubydebug}
-   elasticsearch {
-      hosts => ["<%= node['elasticsearch_url'] %>"]
-      index => "logstash-%{[_index_qualifier]}-%{+YYYY.MM.dd}"
-      template_name => "logstash"
-      template_overwrite => true
-      #user => "XXXXXXXX"
-      #password => "XXXXXXXXXXXXX"
-   }
+    kafka {
+      topic_id => "localhost:9092"
+    }
 
-#    redis {
-#       host => '172.17.0.1'
-#       port => 7379
-#       data_type => 'list'
-#       key => 'logstash:redis'
-#    }
 }
