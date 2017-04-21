@@ -8,12 +8,12 @@ input {
 
 output {
    stdout {codec => rubydebug}
- #  elasticsearch {
- #     hosts => ["<%= node['elasticsearch_url'] %>"]
- #     index => "logstash-%{[_index_qualifier]}-%{+YYYY.MM.dd}"
- #     template_name => "logstash"
- #     template_overwrite => true
- #     #user => "XXXXXXXX"
- #     #password => "XXXXXXXXXXXXX"
- #  }
+   elasticsearch {
+      hosts => ["<%= node['elasticsearch_url'] %>"]
+      index => "logstash-%{[_index_qualifier]}-%{+YYYY.MM.dd}"
+      template_name => "logstash"
+      template_overwrite => true
+      #user => "XXXXXXXX"
+      #password => "XXXXXXXXXXXXX"
+   }
 }
