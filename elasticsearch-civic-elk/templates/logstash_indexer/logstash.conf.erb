@@ -25,7 +25,7 @@ filter {
 }
 
 output {
-   stdout {codec => rubydebug}
+   #stdout {codec => rubydebug}
    elasticsearch {
       hosts => ["<%= node['elasticsearch_url'] %>"]
       index => "logstash-%{[_index_qualifier]}-%{+YYYY.MM.dd}"
