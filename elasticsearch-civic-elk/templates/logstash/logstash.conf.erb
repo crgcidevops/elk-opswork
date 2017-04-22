@@ -10,6 +10,7 @@ output {
     #stdout {codec => rubydebug}
     kafka {
       topic_id => "logstash"
+      codec => "json"
     }
 
 }
