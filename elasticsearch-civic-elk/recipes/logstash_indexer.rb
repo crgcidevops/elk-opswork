@@ -1,16 +1,3 @@
-# docker_service 'default' do
-#   action [:create, :start]
-# end
-
-# docker_image 'busybox' do
-#   action :pull
-# end
-
-# docker_container 'an-echo-server' do
-#   repo 'busybox'
-#   port '1234:1234'
-#   command "nc -ll -p 1234 -e /bin/cat"
-# end
 
 include_recipe 'java'
 
@@ -28,8 +15,8 @@ end
 yum_package 'logstash'
 
 
-template '/etc/logstash/conf.d/default.conf' do
-  source 'logstash_indexer/logstash.conf.erb'
+template '/etc/logstash/conf.d/logstash_indexer.conf' do
+  source 'logstash_indexer/logstash_indexer.conf.erb'
   # owner 'root'
   # group 'root'
   # mode '0755'

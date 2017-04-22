@@ -39,8 +39,8 @@ yum_package 'logstash'
 # end
 
 
-template '/etc/logstash/conf.d/default.conf' do
-  source 'logstash/logstash.conf.erb'
+template '/etc/logstash/conf.d/logstash_receiver.conf' do
+  source 'logstash_receiver/logstash_receiver.conf.erb'
   # owner 'root'
   # group 'root'
   # mode '0755'
