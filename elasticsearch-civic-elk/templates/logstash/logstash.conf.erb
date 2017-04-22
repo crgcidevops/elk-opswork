@@ -1,5 +1,10 @@
 input {
-
+  udp {
+     port => 5557
+     buffer_size => 1452
+     codec => collectd { }
+     type => "collectd"
+  }
   gelf {
     port => 5556
   }
